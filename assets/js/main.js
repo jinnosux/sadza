@@ -26,17 +26,17 @@ $(document).ready(function () {
   // Initialize opacity and video filter
   if (isMobile()) {
     container.css("opacity", 1);
-    // Use the mobile video source
+    muteButton.hide();
     video.attr("src", mobileSource.attr("src"));
     $(".buttons-icons").hide();
     $(".buttons-icons-mobile").show();
   } else {
-    container.css("opacity", 0); // Set initial opacity to 0 for desktop
-    // Use the desktop video source
+    container.css("opacity", 0);
+    muteButton.css("opacity", 0);
     video.attr("src", desktopSource.attr("src"));
     $(".buttons-icons").show();
     $(".buttons-icons-mobile").hide();
-    muteButton.show();
+    //muteButton.show();
   }
 
   video[0].load(); // Reload the video element with the selected source
@@ -47,6 +47,8 @@ $(document).ready(function () {
       // Check if not on mobile
       container.css("opacity", 1);
       video.addClass("blur-effect");
+      muteButton.show();
+      muteButton.css("opacity", 1);
     }
   });
 
@@ -55,6 +57,24 @@ $(document).ready(function () {
     if (!isMobile()) {
       container.css("opacity", 0);
       video.removeClass("blur-effect");
+      muteButton.css("opacity", 0);
+    }
+  });
+
+  muteButton.on("mouseenter", function () {
+    if (!isMobile()) {
+      container.css("opacity", 1);
+      muteButton.show();
+      video.addClass("blur-effect");
+      muteButton.css("opacity", 1);
+    }
+  });
+
+  muteButton.on("mouseleave", function () {
+    if (!isMobile()) {
+      container.css("opacity", 0);
+      video.removeClass("blur-effect");
+      muteButton.css("opacity", 0);
     }
   });
 
