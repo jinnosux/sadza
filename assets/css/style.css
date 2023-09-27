@@ -33,6 +33,10 @@ video {
   transition: opacity 0.3s ease;
 }
 
+.blur-effect {
+    filter: brightness(0.4) blur(3px);
+  }
+
 h1 {
   font-family: "Roboto", sans-serif;
   font-size: 36px;

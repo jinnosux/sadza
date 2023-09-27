@@ -46,7 +46,7 @@ $(document).ready(function () {
     if (!isMobile()) {
       // Check if not on mobile
       container.css("opacity", 1);
-      video.css("filter", "brightness(0.4)");
+      video.addClass("blur-effect");
     }
   });
 
@@ -54,7 +54,7 @@ $(document).ready(function () {
   container.on("mouseleave", function () {
     if (!isMobile()) {
       container.css("opacity", 0);
-      video.css("filter", "brightness(1)");
+      video.removeClass("blur-effect");
     }
   });
 
