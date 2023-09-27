@@ -113,7 +113,7 @@ h2 {
   }
 
   .content-container {
-    top: 18%; /* Move down by 5% from the top */
+    top: 16%; /* Move down by 5% from the top */
     opacity: 1; /* Make it always visible on mobile */
 
     background-color: rgba(0, 0, 0, 0);
