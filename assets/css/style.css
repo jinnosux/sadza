@@ -18,7 +18,7 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(0, 0, 0, 0.1); */
   padding: 50px;
   border-radius: 10px;
   text-align: center;
@@ -106,6 +106,10 @@ h2 {
   }
   h1 {
     margin-bottom: 15px;
+  }
+
+  .buttons-icons-mobile{
+    gap: 0px;
   }
 
   .content-container {
