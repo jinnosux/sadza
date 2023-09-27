@@ -75,3 +75,17 @@ h2 {
 .icon:hover {
     color: #007bff;
 }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            video {
+                object-fit: contain; /* Stretch by width on mobile */
+            }
+
+            .content-container {
+                top: 18%; /* Move down by 5% from the top */
+                opacity: 1; /* Make it always visible on mobile */
+                
+                background-color: rgba(0, 0, 0, 0);
+            }
+        }

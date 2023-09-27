@@ -3,18 +3,32 @@ $(document).ready(function() {
     var video = $("video");
 
     // Initialize opacity and video filter
-    container.css("opacity", 0);
+    if (isMobile()) {
+        container.css("opacity", 1);
+    }
+    else {
+        container.css("opacity", 0); // Set initial opacity to 1 for mobile
+    }
     video.css("filter", "brightness(1)");
 
-    // When mouse enters the container, make it fully visible and darken the video
+    // When mouse enters the container (only for non-mobile), darken the video
     container.on("mouseenter", function() {
-        container.css("opacity", 1);
-        video.css("filter", "brightness(0.4)");
+        if (!isMobile()) { // Check if not on mobile
+            container.css("opacity", 1);
+            video.css("filter", "brightness(0.4)");
+        }
     });
 
-    // When mouse leaves the container, hide it and make the video fully visible
+    // When mouse leaves the container (only for non-mobile), hide it and make the video fully visible
     container.on("mouseleave", function() {
-        container.css("opacity", 0);
-        video.css("filter", "brightness(1)");
+        if (!isMobile()) { // Check if not on mobile
+            container.css("opacity", 0);
+            video.css("filter", "brightness(1)");
+        }
     });
+
+    // Function to detect if the device is a mobile device
+    function isMobile() {
+        return window.innerWidth <= 768; // Adjust the breakpoint if needed
+    }
 });
