@@ -55,13 +55,13 @@ h2 {
   color: #fff;
   text-decoration: none;
   font-size: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-outline-primary:hover {
   text-decoration: none;
   color: #fff;
   /* background-color: #111c20; */
-  border-color: #007bff;
 }
 
 .social-icons {
@@ -122,7 +122,6 @@ h2 {
   .content-container {
     top: 16%; /* Move down by 5% from the top */
     opacity: 1; /* Make it always visible on mobile */
-
     background-color: rgba(0, 0, 0, 0);
   }
 }
@@ -138,18 +137,20 @@ h2 {
   align-items: center;
 }
 
+.volume {
+    margin-top: 20px;
+    --line: #fff;
+    --line-width: 6px;
+    --duration: 0.5s;
+    position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
 .volume:hover {
   --line: #007bff;
 }
-.volume {
-  margin-top: 20px;
-  --line: #fff;
-  --line-width: 6px;
-  --duration: 0.5s;
-  position: relative;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
+
 .volume input {
   display: none;
 }
