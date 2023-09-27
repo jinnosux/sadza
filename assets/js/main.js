@@ -3,6 +3,25 @@ $(document).ready(function () {
   var video = $("#background-video");
   var desktopSource = $("#desktop-source");
   var mobileSource = $("#mobile-source");
+  var muteToggle = $("#mute-toggle");
+  var muteButton = $("#sound-div");
+
+  // Set the video to be muted by default
+  video[0].muted = true;
+
+  // Function to toggle the mute state and update the icon
+  function toggleMute() {
+    video[0].muted = !video[0].muted;
+    muteToggle.toggleClass("sound-mute", video[0].muted);
+  }
+
+  // Trigger a click event on the mute toggle to set the initial state
+  muteToggle.click();
+
+  // Add click event listener to toggle mute and update icon
+  muteToggle.click(function () {
+    toggleMute();
+  });
 
   // Initialize opacity and video filter
   if (isMobile()) {
@@ -17,6 +36,7 @@ $(document).ready(function () {
     video.attr("src", desktopSource.attr("src"));
     $(".buttons-icons").show();
     $(".buttons-icons-mobile").hide();
+    muteButton.show();
   }
 
   video[0].load(); // Reload the video element with the selected source
@@ -33,7 +53,6 @@ $(document).ready(function () {
   // When mouse leaves the container (only for non-mobile), hide it and make the video fully visible
   container.on("mouseleave", function () {
     if (!isMobile()) {
-      // Check if not on mobile
       container.css("opacity", 0);
       video.css("filter", "brightness(1)");
     }
