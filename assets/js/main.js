@@ -1,15 +1,21 @@
 $(document).ready(function() {
     var container = $(".content-container");
-    var video = $("video");
+    var video = $("#background-video");
+    var desktopSource = $("#desktop-source");
+    var mobileSource = $("#mobile-source");
 
     // Initialize opacity and video filter
     if (isMobile()) {
         container.css("opacity", 1);
+        // Use the mobile video source
+        video.attr("src", mobileSource.attr("src"));
+    } else {
+        container.css("opacity", 0); // Set initial opacity to 0 for desktop
+        // Use the desktop video source
+        video.attr("src", desktopSource.attr("src"));
     }
-    else {
-        container.css("opacity", 0); // Set initial opacity to 1 for mobile
-    }
-    video.css("filter", "brightness(1)");
+
+    video[0].load(); // Reload the video element with the selected source
 
     // When mouse enters the container (only for non-mobile), darken the video
     container.on("mouseenter", function() {

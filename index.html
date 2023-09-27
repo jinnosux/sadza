@@ -30,8 +30,9 @@
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
-    <video loading="lazy" autoplay loop muted>
-        <source src="assets/Showreel.mp4" type="video/mp4">
+    <video loading="lazy" autoplay loop muted id="background-video">
+        <source src="assets/showreel.mp4" type="video/mp4" id="desktop-source">
+        <source src="assets/showreel_mobile.mp4" type="video/mp4" id="mobile-source">
         Your browser does not support the video tag.
     </video>
     <div class="content-container">
@@ -40,9 +41,9 @@
         <button type="button" class="btn btn-outline-primary" onclick="window.open('/assets/CV.pdf', '_blank')">View CV</button>
         <button type="button" class="btn btn-outline-primary" onclick="window.location.href='mailto:sadzid020@gmail.com'">Contact me</button>
         <div class="social-icons">
+            <a href="http://www.linkedin.com/in/sadzid-hodzic-58a926232" target="_blank"><i class="icon" data-feather="linkedin"></i></a>
+            <a href="https://www.youtube.com/@sadzidhodzic8893" target="_blank"><i class="icon" data-feather="youtube"></i></a>
             <a href="https://www.instagram.com/your-instagram-url" target="_blank"><i class="icon" data-feather="instagram"></i></a>
-            <a href="https://www.youtube.com/your-youtube-url" target="_blank"><i class="icon" data-feather="youtube"></i></a>
-            <a href="https://www.linkedin.com/in/your-linkedin-url" target="_blank"><i class="icon" data-feather="linkedin"></i></a>
         </div>
     </div>
 
