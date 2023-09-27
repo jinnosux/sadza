@@ -60,12 +60,13 @@ h2 {
   text-decoration: none;
   font-size: 20px;
   transition: background-color 0.3s ease;
+  border-width: 3px;
 }
 
 .btn-outline-primary:hover {
   text-decoration: none;
   color: #fff;
-  /* background-color: #111c20; */
+  background-color: transparent;
 }
 
 .social-icons {
