@@ -61,6 +61,7 @@ h2 {
   font-size: 20px;
   transition: background-color 0.3s ease;
   border-width: 3px;
+  transition: border-color 0.3s ease;
 }
 
 .btn-outline-primary:hover {
