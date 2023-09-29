@@ -137,12 +137,14 @@ h2 {
   }
 
   .content-container {
-    top: 0%;
+    top: 0;
     transform: translateX(-50%);
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.1);
     padding: 10px;
     backdrop-filter: blur(2px);
+    width: 100%;
+    border-radius: 0;
   }
 
 }
