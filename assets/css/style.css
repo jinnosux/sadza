@@ -115,7 +115,7 @@ h2 {
 /* Mobile styles */
 @media (max-width: 768px) {
   video {
-    object-fit: contain; /* Stretch by width on mobile */
+    object-fit: cover; /* Stretch by width on mobile */
   }
   h1 {
     margin-bottom: 15px;
@@ -123,13 +123,17 @@ h2 {
 
   .buttons-icons-mobile {
     gap: 0px;
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   .content-container {
-    top: 16%; /* Move down by 5% from the top */
-    opacity: 1; /* Make it always visible on mobile */
-    background-color: rgba(0, 0, 0, 0);
+    top: 4%;
+    transform: translateX(-50%);
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
   }
+
 }
 
 .sound-div {
