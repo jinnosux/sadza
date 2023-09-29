@@ -130,8 +130,9 @@ h2 {
   }
 
   .buttons-row{
-    width: 100%;
     margin-top: 12px;
+    width: 100%;
+    display: flex;
   }
 
   .content-container {
