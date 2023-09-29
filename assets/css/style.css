@@ -124,10 +124,14 @@ h2 {
   .buttons-icons-mobile {
     gap: 0px;
     background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  .row{
+    width: 100%;
   }
 
   .content-container {
-    top: 4%;
+    top: 0%;
     transform: translateX(-50%);
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.1);
