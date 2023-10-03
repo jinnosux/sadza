@@ -118,11 +118,12 @@ h2 {
     object-fit: cover; /* Stretch by width on mobile */
   }
   h1 {
-    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .buttons-icons-mobile {
-    gap: 10px;
+    gap: 5px;
     background-color: rgba(0, 0, 0, 0.1);
     width: 100%;
     bottom: 0%;
@@ -133,7 +134,7 @@ h2 {
   .buttons-row{
     width: 100%;
     display: flex;
-    padding: 10px 5px; /* top/bottom 10px, left/right 5px */
+    padding: 13px 5px; /* top/bottom 10px, left/right 5px */
   }
 
   .content-container {
@@ -145,6 +146,10 @@ h2 {
     backdrop-filter: blur(2px);
     width: 100%;
     border-radius: 0;
+  }
+
+  .social-icons{
+    padding-bottom: 10px;
   }
 
 }
