@@ -115,21 +115,38 @@ h2 {
 /* Mobile styles */
 @media (max-width: 768px) {
   video {
-    object-fit: contain; /* Stretch by width on mobile */
+    object-fit: cover; /* Stretch by width on mobile */
   }
   h1 {
     margin-bottom: 15px;
   }
 
   .buttons-icons-mobile {
-    gap: 0px;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    bottom: 0%;
+    top: unset;
+    backdrop-filter: blur(2px);
+  }
+
+  .buttons-row{
+    width: 100%;
+    display: flex;
+    padding: 10px 5px; /* top/bottom 10px, left/right 5px */
   }
 
   .content-container {
-    top: 16%; /* Move down by 5% from the top */
-    opacity: 1; /* Make it always visible on mobile */
-    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    transform: translateX(-50%);
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    border-radius: 0;
   }
+
 }
 
 .sound-div {
